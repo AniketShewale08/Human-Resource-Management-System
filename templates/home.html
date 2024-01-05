@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container home-page">
+        <h1>HRMS (Human Resource Management System)</h1>
+        <h2>Employee List</h2>
+
+        <ul class="styled-list">
+            {% for employee in employees %}
+                <li>{{ employee.name }} - {{ employee.designation }} - {{ employee.department }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
